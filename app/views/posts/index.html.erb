@@ -1,0 +1,27 @@
+  <div class= "about_os">
+    <h1>バンドメンバー募集 AWASOUNDS</h1>
+    <p>AWASOUNDSはバンドメンバー募集の掲示板です。皆さまのお役に立てればと、2005年よりスタートしました。便利な検索機能、分かりやすいインターフェース、不正ユーザーの徹底的な排除にこだわりを持っております。</p>
+      <div class="os-container">
+        <div class="about_os__1">
+          <a href="https://www.google.com/">
+          <div class="about_os__1__a">
+          記事を探す
+          </div>
+          </a>
+        </div>
+        <div class="about_os__2">
+          <a href="https://www.google.com/"> 
+          <div class="about_os__2__a">
+          メンバーを探す
+          </div>
+          </a>
+        </div>
+      </div>
+  </div>
+ <div class="contentshead">
+  新着バンドメンバー募集・バンド加入希望
+  </div>
+<% @posts.each do |post| %>
+ <%= render partial: "post", locals: { post: post } %>
+<% end %>
+<%= paginate(@posts) %>

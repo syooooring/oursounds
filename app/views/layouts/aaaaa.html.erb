@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <title>OURSOUNDS</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+       <div class="header__title">
+         <a href="/">
+         <div class="header__title--text">
+         OURSOUNDS
+         </div>
+         </a> 
+       </div>
+       <div class="header__center">
+         <a href="https://www.google.com/">
+         <div class= "header__center--btn">
+         記事を探す
+         </div>
+         </a>
+       </div>
+       <div class="header__center2">
+         <a href="https://www.google.com/">
+         <div class="header__center2__right--btn">
+         メンバーを探す
+         </div>
+         </a>
+       </div>
+       <div class="header__center3">
+         <a href="/posts/new">
+         <div class="header__center3__right2--btn">
+         新規記事投稿
+         </div>
+         </a>
+       </div>
+        <div class="header__left">
+         <%= link_to "ログイン", '#', class: "header__left--btn" %>
+        </div>
+        <div class="header__right">
+         <%= link_to "新規登録", '#', class: "header__right--btn" %>
+        </div>
+     </header>
+     <div class= "banner">
+       <a href="http://mohanak.net/">
+        <img src="https://oursounds.net/common/images/client_bnr/mohanak.jpg?20191104" class="banner__MOHANAK">
+       </a>
+       <a href= "https://rockjoint.link/">
+        <img src="https://oursounds.net/common/images/client_bnr/rockjoint.gif" class="banner__ROCKJOINT">
+       </a>
+       <a href= "https://www.soundproof.jp/">
+        <img src="https://oursounds.net/common/images/client_bnr/tsunagaru_hd.gif?20190331" class="banner__サウンドプルーフプロ蒲田">
+       </a>
+       <a href= "https://oursounds.net/ad/">
+        <img src="https://oursounds.net/common/images/banner_ad.gif" class="banner__広告募集中">
+       </a>
+       <a href="http://mohanak.net/">
+        <img src="https://oursounds.net/common/images/client_bnr/mohanak.jpg?20191104" class="banner__MOHANAK">
+       </a>
+       <a href= "https://rockjoint.link/">
+        <img src="https://oursounds.net/common/images/client_bnr/rockjoint.gif" class="banner__ROCKJOINT">
+       </a>
+       <a href= "https://www.soundproof.jp/">
+        <img src="https://oursounds.net/common/images/client_bnr/tsunagaru_hd.gif?20190331" class="banner__サウンドプルーフプロ蒲田">
+       </a>
+       <a href= "https://oursounds.net/ad/">
+        <img src="https://oursounds.net/common/images/banner_ad.gif" class="banner__広告募集中">
+       </a>
+     </div>
+     <div class= "about_os">
+      <h1>バンドメンバー募集 OURSOUNDS</h1>
+      <p>OURSOUNDSはバンドメンバー募集の掲示板です。皆さまのお役に立てればと、2005年よりスタートしました。便利な検索機能、分かりやすいインターフェース、不正ユーザーの徹底的な排除にこだわりを持っております。</p>
+        <div class="os-container">
+          <div class="about_os__1">
+            <a href="https://www.google.com/">
+            <div class="about_os__1__a">
+            記事を探す
+            </div>
+            </a>
+          </div>
+          <div class="about_os__2">
+            <a href="https://www.google.com/"> 
+            <div class="about_os__2__a">
+            メンバーを探す
+            </div>
+            </a>
+          </div>
+        </div>
+     </div>
+     <div class="contents">
+       <%= yield %>
+     </div>
+  </body>
+</html>

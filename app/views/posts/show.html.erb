@@ -1,0 +1,36 @@
+<div class="postTitle">
+  <%= @post.title %>
+</div>
+<div class="postDate">
+  <%= @post.created_at %>投稿
+</div>
+<div class="postAuthor">
+</div>
+<% if user_signed_in? && current_user.id == @post.user_id %>
+  <div class="postManage">
+    <%= link_to "編集", edit_post_path(@post.id), class: "postManage__edit" %>
+    <%= link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete" %>
+  </div>
+<% end %>
+<div class="postText">
+  <li>記事の内容</li>
+  <%= simple_format @post.text %>
+  <li>記事の種類</li>
+  <%= simple_format @post.type %>
+  <li>活動エリア</li>
+  <%= simple_format @post.area %>
+  <li>活動日</li>
+  <%= simple_format @post.day %>
+  <li>バンドの方向性</li>
+  <%= simple_format @post.course %>
+  <li>バンドのテーマ</li>
+  <%= simple_format @post.style %>
+  <li>ジャンル</li>
+  <%= simple_format @post.genre %>
+  <li>デモ音源</li>
+  <%= simple_format @post.sound %>
+  <li>バンドの楽曲</li>
+  <%= simple_format @post.music %>
+  <li>パート</li>
+  <%= simple_format @post.pert %>
+</div>
