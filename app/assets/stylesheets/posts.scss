@@ -1,39 +1,34 @@
 body{
-  background-color: #f6f6f6;
-  min-width: 650px;
-  overflow: scroll;
+  background-color: #fff;
+  width: 100%;
+  min-width: 500px;
 
   .header{
     height: 60px;
-    width: 1260px;
+    width: 100%;
     padding: 0 80px;
+    overflow: scroll;
     background-color: #fff;
     color: #005151;
     display: flex;
     top: 0;
     position: fixed;
+    border-bottom: solid 2px #ddd;
     justify-content: space-between;
-    border-bottom:3px solid gray;
     
     &__title{
-      font-size: 50px;
+      font-size: 55px;
       line-height: 60px;
       font-weight: bold;
-      a:link { text-decoration:none }
-      a:visited{ text-decoration:none }
-      a:hover { text-decoration:none }
-      a:active { text-decoration:none }
-      &--text{
-        text-decoration: none;
-        background: -webkit-linear-gradient(0deg, #ff8c00, #FF0080, #FF8c00);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        font-family: 'Impact';
-       
-      }
+      text-decoration: none;
+      background: linear-gradient(#005151, #009999);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-family: 'Impact';
     }
     &__right{
       width: 120px;
+      min-width: 100px;
       height: 55px;
       margin-top: 2.5px;
       background-color:#ff7900;
@@ -46,6 +41,7 @@ body{
     }
     &__left{
       width: 120px;
+      min-width: 100px;
       height: 55px;
       margin-top: 2.5px;
       background-color:#e8a63c;
@@ -58,42 +54,33 @@ body{
     }
     &__center{
       width: 120px;
+      min-width: 100px;
       height: 55px;
       margin-top: 2.5px;
       background-color:#006699;
       text-align: center;
       font-weight: bold;
       border-radius: 30px;
-      a:link {color:#fff; text-decoration:none }
-      a:visited { color:#fff; text-decoration:none }
-      a:hover { color:#fff; text-decoration:none }
-      a:active { color:#fff; text-decoration:none }
-      &--btn{
-        text-decoration: none;
-        line-height: 55px;
-        color: #fff;
-      }
+      text-decoration: none;
+      line-height: 55px;
+      color: #fff;
     }
     &__center2{
       width: 120px;
+      min-width: 100px;
       height: 55px;
       margin-top: 2.5px;
       background-color:#009999;
       text-align: center;
       border-radius: 30px;
       font-weight: bold;
-      a:link {color:#fff; text-decoration:none }
-      a:visited { color:#fff; text-decoration:none }
-      a:hover { color:#fff; text-decoration:none }
-      a:active { color:#fff; text-decoration:none }
-      &__right--btn{
-        text-decoration: none;
-        line-height: 55px;
-        color: #fff;
-      }
+      text-decoration: none;
+      line-height: 55px;
+      color: #fff;
     }
     &__center3{
       width: 120px;
+      min-width: 100px;
       height: 55px;
       margin-top: 2.5px;
       background-color:#777777	;
@@ -104,99 +91,132 @@ body{
       line-height: 55px;
       font-size: 14px; 
       color: #fff;
-      a:link {color:#fff; text-decoration:none }
-      a:visited { color:#fff; text-decoration:none }
-      a:hover { color:#fff; text-decoration:none }
-      a:active { color:#fff; text-decoration:none }
     }
   }
   .banner{
-    width: 320px;
+    width: 20%;
+    min-width: 0px;
+    min-height: 0%;
     background-color: #fff;
     float: right;
-    margin-right: 84px;
-    margin-top: 55px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 80px;
+
+    &__Vocal{
+      width: 100%;
+    }
+
+    &__Guiter{
+      width: 100%;
+    }
+
+    &__Bass{
+      width: 100%;
+    }
+     
+    &__Piano{
+      width: 100%;
+    }
     
-    &__MOHANAK{
+    &__Drums{
       width: 100%;
     }
-
-    &__ROCKJOINT{
-      width: 100%;
-    }
-
-    &__サウンドプルーフプロ蒲田{
-      width: 100%;
-    }
-
-    &__広告募集中{
-      width: 100%;
-    }
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
   }
   .about_os{
     color: #fff;
     padding: 1em;
     margin-bottom: 1em;
     background-color: #005151;
-    width: 900px;
+    width: 100%;
+    min-width: 500px;
     font-weight: bold;
     margin-top: 55px;
 
-    float: left;
     .os-container {
       display: flex;
     }
+
     &__1{
-      margin-bottom: 0;
-      height: 60px;
-      width: 440px;
+      height: 55px;
+      width: 50%;
+      min-width: 150px;
       background-color: #006699;
       text-align: center;
       border-radius: 5px;
-      line-height: 60px;
-      a:link {color:#fff; text-decoration:none }
-      a:visited { color:#fff; text-decoration:none }
-      a:hover { color:#fff; text-decoration:none }
-      a:active { color:#fff; text-decoration:none }
-      
-    
-      &__a{
-        color: #fff;
-        font-weight: bold;
-
-      }
+      line-height: 55px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
     }
     &__2{
       margin-left: 10px;
-      margin-bottom: 0;
-      height: 60px;
-      width: 450px;
+      height: 55px;
+      width: 50%;
+      min-width: 150px;
       background-color: #009999;
       text-align: center;
       border-radius: 5px;
-      line-height: 60px;
-      a:link {color:#fff; text-decoration:none }
-      a:visited { color:#fff; text-decoration:none }
-      a:hover { color:#fff; text-decoration:none }
-      a:active { color:#fff; text-decoration:none }
-
-      &__a{
-        color: #fff;
-        font-weight: bold;
-        
-        
-        
-        
-      }
+      line-height: 55px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
   .contents{
     margin: 0px 0px 10px 80px;
-    background-color: #dddddd;
+    background-color: #fff;
     height:100%;
-    width: 932px;
+    width: 65%;
+    min-width: 500px;
+    margin-top: 50px;
     padding-bottom: 50px;
-    .aaaaa{
+
+    form{
+      height: 40px;
+      min-width: 15%;
+      margin-left: 50px;
+      padding-bottom: 100px;
+    }
+    input.search-btn{
+      margin-left: 50px;
+      margin-top: 20px;
+      width: 15%;
+      height: 40px;
+      background-color: #FF9900;
+      font-weight: bold;
+      font-size: 14px;
+      color:#fff;
+      -webkit-appearance: initial;
+      cursor: pointer;
+    }
+    .Login0{
+      line-height: 90px;
+      font-size: 25px;
+      font-weight: bold;
+      color: #333;
+      margin-left: 50px;
+    }
+    .Signup{
+      font-size: 25px;
+      color: #333;
+      font-weight: bold;
+      margin-left: 50px;
+      line-height: 90px;
+    }
+    .title0{
+      font-size: 25px;
+      color: #333;
+      font-weight: bold;
+      margin-left: 50px;
+      line-height: 90px;
+    }
+    .log{
       font-size: 20px;
       font-weight: bold;
       margin-left: 50px;
@@ -207,6 +227,7 @@ body{
       height: 50px;
       width: 150px;
       margin: 35px;
+
       input{
         width: 200px;
         height: 40px;
@@ -220,31 +241,30 @@ body{
       }
     }
     .field{
-      font-size: 25px;
+      font-size: 15px;
       margin-left: 50px;
       color: #555555;
       font-weight: bold;
+
       input{
         height: 40px;
        font-size: 20px;
        padding-right:100px;
       }
     }
-    
-   
-    
-    
     .contentshead{
-      border-top: 3px solid #aaaaaa;
       background-color: #DDDDDD;
-      border-bottom: 3px solid #aaaaaa;
+      border-bottom: 3px solid #bbb;
       padding: 0 10px;
-      color: #000;
+      color: #333;
       line-height: 40px;
+      padding-left: 62px;
       font-size: 1.142em;
       font-weight: bold;
+      background-size: 52px 41px;
+      background-repeat: no-repeat;
+      background-image: url(https://oursounds.net/common/images_sp/bg_hl_new.png);
     }
-    
     .pagination{
       font-weight: bold;
       font-family: 'impact';
@@ -257,41 +277,45 @@ body{
     }
     .content{
       padding: 10px;
-      border-bottom: 1px solid #f6f6f6;
+      border-bottom: 1px solid #cccccc;
+      min-width: 300px;
       display: flex;
+
       &__left{
         padding-right: 20px;
         &--image{
           height: 55px;
           width: 55px;
-          color: #000;
-          border: solid 2px;
-          background-color: #fff;
         }
       }
       &__right{
-        width: calc(100%-100px);
+        width: 100%;
+        min-width: 300px;
+
         &__top{
           font-size: 20px;
           font-weight: bold;
-          color: #000;
-          &--title{
+          color: #333;
+
+          &__title{
             text-decoration: none;
-            color: #000;
+            color: #333;
           }
         }
         &__bottom{
           font-size: 15px;
-          color: #000;
+          color: #333;
           display: flex;
-          &--userName{
-            &--btn{
+
+          &__userName{
+
+            &__btn{
               text-decoration: none;
-              color: #000;
+              color: #333;
               font-weight: bold;
             }
           }
-          &--date{
+          &__date{
             margin-left: 20px;
           }
         }
@@ -323,6 +347,7 @@ body{
     }
     .postTitle{
       padding-top: 20px;
+      min-width: 300px;
       text-align: center;
       font-size: 20px;
       font-weight: bold;
@@ -342,6 +367,7 @@ body{
       display: flex;
       justify-content: center;
       margin-top: 10px;
+
       &__edit{
         display: block;
         width: 80px;
@@ -373,6 +399,7 @@ body{
     }
     .postText{
       margin: 20px 30px;
+
       li{
         font-weight: bold;
         color:#005151;
@@ -388,6 +415,7 @@ body{
     padding-top: 20px;
     font-weight: bold;
     font-size: 20px;
+
     select{
       width: 100%;
       height: 45px;
@@ -480,10 +508,11 @@ body{
       padding: 15px;
       cursor: pointer;
       -webkit-appearance: initial;
-      
     }
   }
   .user{
     padding: 15px 30px;
   }
 }
+
+*{box-sizing:border-box}

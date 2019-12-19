@@ -12,64 +12,37 @@
 
   <body>
     <header class="header">
-       <div class="header__title">
-         <a href="/">
-         <div class="header__title--text">
-         AWASOUNDS
-         </div>
-         </a> 
-       </div>
-       <div class="header__center">
-         <a href="https://www.google.com/">
-         <div class= "header__center--btn">
-         記事を探す
-         </div>
-         </a>
-       </div>
-       <div class="header__center2">
-         <a href="https://www.google.com/">
-         <div class="header__center2__right--btn">
-         メンバーを探す
-         </div>
-         </a>
-       </div>
-        <%if user_signed_in? %>
-          <%= link_to current_user.nickname, user_path(current_user), class: "header__center3" %>
-          <%= link_to "新規投稿", new_post_path, class: "header__left" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right" %>
-        <% else %>
-          <%= link_to "新規登録", new_user_registration_path, class: "header__left" %>
-          <%= link_to "ログイン", new_user_session_path, method: :get, class: "header__right" %>
-        <% end %>
-     </header>
-     <div class= "banner">
-       <a href="http://mohanak.net/">
-        <img src="https://oursounds.net/common/images/client_bnr/mohanak.jpg?20191104" class="banner__MOHANAK">
-       </a>
-       <a href= "https://rockjoint.link/">
-        <img src="https://oursounds.net/common/images/client_bnr/rockjoint.gif" class="banner__ROCKJOINT">
-       </a>
-       <a href= "https://www.soundproof.jp/">
-        <img src="https://oursounds.net/common/images/client_bnr/tsunagaru_hd.gif?20190331" class="banner__サウンドプルーフプロ蒲田">
-       </a>
-       <a href= "https://oursounds.net/ad/">
-        <img src="https://oursounds.net/common/images/banner_ad.gif" class="banner__広告募集中">
-       </a>
-       <a href="http://mohanak.net/">
-        <img src="https://oursounds.net/common/images/client_bnr/mohanak.jpg?20191104" class="banner__MOHANAK">
-       </a>
-       <a href= "https://rockjoint.link/">
-        <img src="https://oursounds.net/common/images/client_bnr/rockjoint.gif" class="banner__ROCKJOINT">
-       </a>
-       <a href= "https://www.soundproof.jp/">
-        <img src="https://oursounds.net/common/images/client_bnr/tsunagaru_hd.gif?20190331" class="banner__サウンドプルーフプロ蒲田">
-       </a>
-       <a href= "https://oursounds.net/ad/">
-        <img src="https://oursounds.net/common/images/banner_ad.gif" class="banner__広告募集中">
-       </a>
-     </div>
-     <div class="contents">
-       <%= yield %>
-     </div>
+      <%= link_to "AWASOUNDS", root_path, class: "header__title" %>
+      <%= link_to "記事を探す", search_posts_path, class: "header__center" %>
+      <%= link_to "メンバーを探す", search_posts_path, class: "header__center2" %>
+      <%if user_signed_in? %>
+        <%= link_to current_user.nickname, user_path(current_user), class: "header__center3" %>
+        <%= link_to "新規投稿", new_post_path, class: "header__left" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right" %>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path, class: "header__left" %>
+        <%= link_to "ログイン", new_user_session_path, method: :get, class: "header__right" %>
+      <% end %>
+    </header>
+      <div class= "banner clearfix">
+        <a href= "https://rockjoint.link/">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="banner__Vocal">
+        </a>
+        <a href= "https://www.soundproof.jp/">
+        <img src="https://images.unsplash.com/photo-1515850031371-8230418d8aed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Guiter">
+        </a>
+        <a href= "https://oursounds.net/ad/">
+        <img src="https://images.unsplash.com/photo-1565876651345-6a24080c1c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Bass">
+        </a>
+        <a href="http://mohanak.net/">
+        <img src="https://images.unsplash.com/photo-1519479029449-38c9aed0f322?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="banner__Piano">
+        </a>
+        <a href= "https://rockjoint.link/">
+        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Drums">
+        </a>
+      </div>
+      <div class="contents">
+        <%= yield %>
+      </div>
   </body>
 </html>
