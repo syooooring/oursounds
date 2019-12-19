@@ -35,14 +35,28 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword])
+    @posts = Post.where(post_search_params)
+  end
+
+  def drums
+    @posts = Post.where(pert: "ドラム")
   end
 
 
    private
-   def post_params
-     params.require(:post).permit( :type, :area, :day, :course, :style, :pert, :genre, :music, :sound, :title, :text).merge(user_id: current_user.id)
-   end
 
+  def post_search_params
+    p = params.permit(:type, :area, :day, :course, :style, :pert, :genre, :music)
+    p.select{|key,value| value != ""}
+    
+    # selected = {}
+    # p.each{|k,v|
+    #   selected[k] = v if v != ""
+    # }
+    # return selected
+  end
 
+  def post_params
+    params.require(:post).permit( :type, :area, :day, :course, :style, :pert, :genre, :music, :sound, :title, :text).merge(user_id: current_user.id)
+  end
 end
