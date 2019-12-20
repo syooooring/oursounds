@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'drums'
+      get 'bass'
+      get 'keyboard'
+      get 'guiter'
+      get 'vocal'
     end
   end
   resources :users, only: :show
