@@ -42,6 +42,21 @@ class PostsController < ApplicationController
     @posts = Post.where(pert: "ドラム")
   end
 
+  def bass
+    @posts = Post.where(pert: "ベース")
+  end
+
+  def keyboard
+    @posts = Post.where(pert: "ピアノ・キーボード")
+  end
+
+  def guiter
+    @posts = Post.where(pert: "ギター")
+  end
+
+  def vocal
+    @posts = Post.where(pert: "ボーカル")
+  end
 
    private
 

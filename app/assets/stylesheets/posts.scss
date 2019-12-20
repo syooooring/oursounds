@@ -123,11 +123,6 @@ body{
       width: 100%;
     }
   }
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
-  }
   .about_os{
     color: #fff;
     padding: 1em;
