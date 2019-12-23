@@ -1,103 +1,122 @@
 body{
-  background-color: #fff;
+  background-color: #f5f5f5;
   width: 100%;
   min-width: 500px;
+  margin: 0;
 
   .header{
     height: 60px;
     width: 100%;
-    padding: 0 80px;
+    padding: 0 82px;
     overflow: scroll;
-    background-color: #fff;
+    background-color: #f5f5f5;
     color: #005151;
     display: flex;
     top: 0;
     position: fixed;
-    border-bottom: solid 2px #ddd;
     justify-content: space-between;
+    z-index: 1;
     
     &__title{
-      font-size: 55px;
+      font-size: 35px;
       line-height: 60px;
       font-weight: bold;
       text-decoration: none;
-      background: linear-gradient(#005151, #009999);
+      transition: .3s;
+      background: linear-gradient(#103675, #009999);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       font-family: 'Impact';
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
     &__right{
       width: 120px;
       min-width: 100px;
-      height: 55px;
+      height: 45px;
       margin-top: 2.5px;
-      background-color:#ff7900;
       text-align: center;
       font-weight: bold;
-      border-radius: 30px;
       text-decoration: none;
-      line-height: 55px;
-      color: #fff;
+      line-height: 50px;
+      color: #103675;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        border-bottom: 1px solid #103675;
+      }
     }
     &__left{
       width: 120px;
       min-width: 100px;
-      height: 55px;
+      height: 45px;
       margin-top: 2.5px;
-      background-color:#e8a63c;
       text-align: center;
       font-weight: bold;
-      border-radius: 30px;
       text-decoration: none;
-      line-height: 55px;
-      color: #fff;
+      line-height: 50px;
+      color: #103675;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        border-bottom: 1px solid #103675;
+      }
     }
     &__center{
       width: 120px;
       min-width: 100px;
-      height: 55px;
+      height: 45px;
       margin-top: 2.5px;
-      background-color:#006699;
       text-align: center;
       font-weight: bold;
-      border-radius: 30px;
       text-decoration: none;
-      line-height: 55px;
-      color: #fff;
+      line-height: 50px;
+      color: #103675;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        border-bottom: 1px solid #103675;
+      }
     }
-    &__center2{
+    &__member{
       width: 120px;
       min-width: 100px;
-      height: 55px;
+      height: 45px;
       margin-top: 2.5px;
-      background-color:#009999;
       text-align: center;
-      border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
-      line-height: 55px;
-      color: #fff;
+      line-height: 50px;
+      color: #103675;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        border-bottom: 1px solid #103675;
+      }
     }
-    &__center3{
+    &__mypage{
       width: 120px;
       min-width: 100px;
-      height: 55px;
+      height: 45px;
       margin-top: 2.5px;
-      background-color:#777777	;
-      border-radius: 30px;
       text-align: center;
       font-weight: bold;
       text-decoration: none;
-      line-height: 55px;
-      font-size: 14px; 
-      color: #fff;
+      line-height: 50px;
+      color: #103675;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        border-bottom: 1px solid #103675;
+      }
     }
   }
   .banner{
     width: 20%;
     min-width: 0px;
     min-height: 0%;
-    background-color: #fff;
     float: right;
     margin-right: 50px;
     margin-top: 10px;
@@ -105,67 +124,106 @@ body{
 
     &__Vocal{
       width: 100%;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
 
     &__Guiter{
       width: 100%;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
 
     &__Bass{
       width: 100%;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
      
     &__Piano{
       width: 100%;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
     
     &__Drums{
       width: 100%;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+      }
     }
   }
   .about_os{
-    color: #fff;
+    color: #eee;
     padding: 1em;
+    text-shadow: 1px 2px 3px #888;
     margin-bottom: 1em;
-    background-color: #005151;
+    background-color: #103675;
     width: 100%;
     min-width: 500px;
     font-weight: bold;
     margin-top: 55px;
+    background-image: url("https://images.unsplash.com/photo-1420161900862-9a86fa1f5c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 
     .os-container {
       display: flex;
     }
 
-    &__1{
+    &__right{
       height: 55px;
       width: 50%;
       min-width: 150px;
-      background-color: #006699;
       text-align: center;
-      border-radius: 5px;
+      transition:.3s;
       line-height: 55px;
-      color: #fff;
+      color: white;
       font-weight: bold;
       text-decoration: none;
+      border-radius: 2px;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        background-color: #fff;
+        color: #103675;
+      }
     }
-    &__2{
+    &__left{
       margin-left: 10px;
       height: 55px;
       width: 50%;
       min-width: 150px;
-      background-color: #009999;
       text-align: center;
-      border-radius: 5px;
       line-height: 55px;
-      color: #fff;
+      color: white;
       font-weight: bold;
+      border-radius: 2px;
       text-decoration: none;
+      transition: .3s;
+      &:hover{
+        opacity: 0.75;
+        transition:.3s;
+        background-color: #fff;
+        color: #103675;
+      }
     }
   }
   .contents{
     margin: 0px 0px 10px 80px;
-    background-color: #fff;
     height:100%;
     width: 65%;
     min-width: 500px;
@@ -190,7 +248,7 @@ body{
       -webkit-appearance: initial;
       cursor: pointer;
     }
-    .Login0{
+    .LoginTitle{
       line-height: 90px;
       font-size: 25px;
       font-weight: bold;
@@ -204,7 +262,7 @@ body{
       margin-left: 50px;
       line-height: 90px;
     }
-    .title0{
+    .articleTitle{
       font-size: 25px;
       color: #333;
       font-weight: bold;
@@ -247,9 +305,8 @@ body{
        padding-right:100px;
       }
     }
-    .contentshead{
-      background-color: #DDDDDD;
-      border-bottom: 3px solid #bbb;
+    .contentsHead{
+      border-bottom: 1px solid #ccc;
       padding: 0 10px;
       color: #333;
       line-height: 40px;
@@ -265,7 +322,7 @@ body{
       font-family: 'impact';
       font-size: 25px;
       margin-top: 50px;
-      background: -webkit-linear-gradient(0deg, #ff8c00, #FF0080, #FF8c00);
+      background: linear-gradient(#103675, #009999);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       margin-left: 30px;
@@ -295,6 +352,9 @@ body{
           &__title{
             text-decoration: none;
             color: #333;
+            &:hover{
+              text-decoration: underline;
+            }
           }
         }
         &__bottom{
@@ -308,6 +368,9 @@ body{
               text-decoration: none;
               color: #333;
               font-weight: bold;
+              &:hover{
+                text-decoration: underline;
+              }
             }
           }
           &__date{
@@ -316,15 +379,13 @@ body{
         }
       }
       &__title{
-        background-color: #005151;
-        border-top: 3px solid #009966;
-        border-bottom: 3px solid #009966;
+        background-color: #103675;
         width: 100%;
         height: 50px;
         margin-top: 68px;
       
-        &__1{
-          font-size: 30px;
+        &__main{
+          font-size: 15px;
           font-weight: bold;
           line-height: 50px;
           text-align: center;
@@ -371,7 +432,7 @@ body{
         text-align: center;
         line-height: 40px;
         color: #ffffff;
-        background-color:#009999;
+        background-color:#103675;
         font-weight: bold;
         padding: 0 10px;
         text-decoration: none;
@@ -381,7 +442,7 @@ body{
         display: block;
         border-radius: 5px;
         color: #ffffff;
-        background-color:#009999;
+        background-color:#103675;
         width: 80px;
         height: 40px;
         line-height: 40px;
@@ -394,10 +455,13 @@ body{
     }
     .postText{
       margin: 20px 30px;
+      font-weight: bold;
+      color: #333;
 
       li{
         font-weight: bold;
-        color:#005151;
+        color:#103675;
+        font-size: 20px;
         border-bottom:solid 2px #999;
         list-style: none;
       }
@@ -497,7 +561,7 @@ body{
       color: #fff;
       border-radius: 7px;
       margin: 50px auto;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: bold;
       line-height: 20px;
       padding: 15px;
@@ -507,6 +571,34 @@ body{
   }
   .user{
     padding: 15px 30px;
+  }
+  .mm{
+   font-size: 20px;
+   font-weight: bold;
+   color: #333;
+  }
+  .gm{
+    font-weight: bold;
+    font-size: 12px;
+  }
+  #message_content{
+    width: 60%;
+    min-height: 50px;
+    font-size: 15px;
+    border: 1px solid #999;
+  }
+  .sc{
+    font-size: 15px;
+    line-height: 30px;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    color:#fff;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #ff9900;
+    width: 100px;
+    -webkit-appearance: initial;
   }
 }
 

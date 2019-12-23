@@ -1,0 +1,10 @@
+<div class="articleTitle">
+  メッセージ
+</div>
+<div class="contents row">
+  <% @anotherEntries.each do |e| %>
+    <%= link_to room_path(e.room.id) do %>
+      <%= e.user.nickname %>さん<br>
+    <% end %>
+  <% end %>
+</div>

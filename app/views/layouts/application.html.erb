@@ -14,9 +14,9 @@
     <header class="header">
       <%= link_to "AWASOUNDS", root_path, class: "header__title" %>
       <%= link_to "記事を探す", search_posts_path, class: "header__center" %>
-      <%= link_to "メンバーを探す", search_posts_path, class: "header__center2" %>
+      <%= link_to "メッセージ", rooms_path, class: "header__member" %>
       <%if user_signed_in? %>
-        <%= link_to current_user.nickname, user_path(current_user), class: "header__center3" %>
+        <%= link_to "マイページ", user_path(current_user), class: "header__mypage" %>
         <%= link_to "新規投稿", new_post_path, class: "header__left" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right" %>
       <% else %>
@@ -26,19 +26,19 @@
     </header>
       <div class= "banner">
         <%= link_to vocal_posts_path do %>
-        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="banner__Vocal">
+        <img src="https://images.unsplash.com/photo-1541592553160-82008b127ccb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Vocal" >
         <% end %>
         <%= link_to guiter_posts_path do %>
-        <img src="https://images.unsplash.com/photo-1515850031371-8230418d8aed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Guiter">
+        <img src="https://images.unsplash.com/photo-1516315973067-166cf84425bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Guiter" >
         <% end %>
         <%= link_to bass_posts_path do %>
         <img src="https://images.unsplash.com/photo-1565876651345-6a24080c1c77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Bass">
         <% end %>
         <%= link_to keyboard_posts_path do %>
-        <img src="https://images.unsplash.com/photo-1519479029449-38c9aed0f322?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" class="banner__Piano">
+        <img src="https://images.unsplash.com/photo-1564404608947-a53a30547c92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Piano">
         <% end %>
         <%= link_to drums_posts_path do %>
-        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Drums">
+        <img src="https://images.unsplash.com/photo-1536718453717-7982aa9d8bed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="banner__Drums">
         <% end %>
       </div>
       <div class="contents">

@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
-    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(10)
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(8)
     
   end
 
@@ -20,6 +22,10 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    if @post.user.id == current_user.id 
+    else
+      redirect_to root_path
+    end
   end
 
   def update
@@ -59,6 +65,10 @@ class PostsController < ApplicationController
   end
 
    private
+
+   def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 
   def post_search_params
     p = params.permit(:type, :area, :day, :course, :style, :pert, :genre, :music)

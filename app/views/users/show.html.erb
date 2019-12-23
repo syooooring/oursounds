@@ -7,7 +7,7 @@
 
 <h1>ユーザー詳細</h1>
 
-<h2><%= @user.email %></h2>
+<h2><%= @user.nickname %></h2>
 
 <% if @user.id == current_user.id %>
 
@@ -24,4 +24,4 @@
   <% end %>
 <% end %>
 
-<%= link_to "ユーザー一覧に戻る", users_path %>
+<%= link_to "戻る",root_path %>

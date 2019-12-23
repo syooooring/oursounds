@@ -1,4 +1,6 @@
-<h1>DM</h1>
+<div class="articleTitle">
+  トークルーム
+</div>
 
 <h4>参加者</h4>
 <% @entries.each do |e| %>
@@ -8,8 +10,12 @@
 <hr>
 <% if @messages.present? %>
   <% @messages.each do |m| %>
+    <div class="mm">
     <strong><%= m.content %></strong>
-    <small>by <strong><a href="/users/<%= m.user_id %>"><%= m.user.nickname %>さん</a></strong></small>
+    </div>
+    <div class="gm">
+    <%= m.user.nickname %>さん</a></strong></small>
+    </div>
     <hr>
   <% end %>
 <% else %>
@@ -17,10 +23,10 @@
 <% end %>
 
 <%= form_for @message do |f| %>
-  <%= f.text_field :content, placeholder: "メッセージを入力して下さい" , size: 70 %>
+  <%= f.text_area :content, placeholder: "メッセージを入力して下さい" %>
   <%= f.hidden_field :room_id, value: @room.id %>
   <br>
-  <%= f.submit "投稿する" %>
+  <%= f.submit "送信", class: "sc"%>
 <% end %>
 
-<%= link_to "ユーザー一覧に戻る", users_path %>
+<%= link_to "ユーザー一覧に戻る", rooms_path %>

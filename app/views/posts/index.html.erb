@@ -2,11 +2,11 @@
     <h3>バンドメンバー募集 AWASOUNDS</h3>
     <p>AWASOUNDSはバンドメンバー募集の掲示板です。皆さまのお役に立てればと、2005年よりスタートしました。便利な検索機能、分かりやすいインターフェース、不正ユーザーの徹底的な排除にこだわりを持っております。</p>
       <div class="os-container">
-        <%= link_to "記事を探す", search_posts_path, class: "about_os__1" %>
-        <%= link_to "メンバーを探す", search_posts_path, class: "about_os__2" %>
+        <%= link_to "記事を探す", search_posts_path, class: "about_os__right" %>
+        <%= link_to "記事を投稿する", new_post_path, class: "about_os__left" %>
       </div>
   </div>
-<div class="contentshead">
+<div class="contentsHead">
   新着バンドメンバー募集・バンド加入希望
 </div>
 <% @posts.each do |post| %>
