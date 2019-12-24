@@ -10,10 +10,10 @@
 <hr>
 <% if @messages.present? %>
   <% @messages.each do |m| %>
-    <div class="mm">
+    <div class="messages">
     <strong><%= m.content %></strong>
     </div>
-    <div class="gm">
+    <div class="m-user">
     <%= m.user.nickname %>さん</a></strong></small>
     </div>
     <hr>
@@ -26,7 +26,7 @@
   <%= f.text_area :content, placeholder: "メッセージを入力して下さい" %>
   <%= f.hidden_field :room_id, value: @room.id %>
   <br>
-  <%= f.submit "送信", class: "sc"%>
+  <%= f.submit "送信", class: "sm-btn"%>
 <% end %>
 
 <%= link_to "ユーザー一覧に戻る", rooms_path %>
