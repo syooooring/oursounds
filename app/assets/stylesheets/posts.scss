@@ -128,11 +128,10 @@ body{
       &:hover{
         opacity: 0.75;
         transition:.3s;
-        padding: 5px;
       }
     }
 
-    &__Guiter{
+    &__Guitar{
       width: 100%;
       transition: .3s;
       &:hover{
@@ -328,7 +327,7 @@ body{
       -webkit-background-clip: text;
       margin-left: 30px;
     }
-    .content{
+    .container{
       padding: 10px;
       border-bottom: 1px solid #cccccc;
       min-width: 300px;
@@ -573,12 +572,12 @@ body{
   .user{
     padding: 15px 30px;
   }
-  .mm{
+  .messages{
    font-size: 20px;
    font-weight: bold;
    color: #333;
   }
-  .gm{
+  .m-user{
     font-weight: bold;
     font-size: 12px;
   }
@@ -588,7 +587,7 @@ body{
     font-size: 15px;
     border: 1px solid #999;
   }
-  .sc{
+  .sm-btn{
     font-size: 15px;
     line-height: 30px;
     display: block;

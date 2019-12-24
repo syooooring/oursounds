@@ -1,16 +1,16 @@
-<div class="content">
-    <div class="content__left">
-      <div class="content__left--image" ><%= image_tag post.user.image, size: '55x55' %></div>
+<div class="container">
+    <div class="container__left">
+      <div class="container__left--image" ><%= image_tag post.user.image, size: '55x55' %></div>
     </div>
-    <div class="content__right">
-      <div class="content__right__top">
-         <%= link_to post.title, post_path(post.id), class: "content__right__top__title" %>
+    <div class="container__right">
+      <div class="container__right__top">
+         <%= link_to post.title, post_path(post.id), class: "container__right__top__title" %>
       </div>
-      <div class="content__right__bottom">
-         <div class="content__right__bottom__username">
-          <%= link_to post.user.nickname, user_path(post.user), class: "content__right__bottom__userName__btn" %>
+      <div class="container__right__bottom">
+         <div class="container__right__bottom__username">
+          <%= link_to post.user.nickname, user_path(post.user), class: "container__right__bottom__userName__btn" %>
         </div>
-        <div class="content__right__bottom__date">
+        <div class="container__right__bottom__date">
           <%= post.created_at %>投稿
         </div>
       </div>
