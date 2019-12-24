@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: oursounds_production
-  username: oursounds
+  username: root
   password: <%= ENV['OURSOUNDS_DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
