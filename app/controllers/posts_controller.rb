@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   before_action :authenticate_user!
+  before_action :set_post, only:[:show ,:edit]
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(8)
@@ -17,11 +18,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def edit
-    @post = Post.find(params[:id])
     if @post.user.id == current_user.id 
     else
       redirect_to root_path
@@ -65,6 +64,10 @@ class PostsController < ApplicationController
   end
 
    private
+
+   def set_post
+    @post = Post.find(params[:id])
+   end
 
    def move_to_index
     redirect_to action: :index unless user_signed_in?

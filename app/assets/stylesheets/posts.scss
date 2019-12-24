@@ -26,7 +26,7 @@ body{
       background: linear-gradient(#103675, #009999);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-      font-family: 'Impact';
+      font-family: 'Quicksand', sans-serif;
       &:hover{
         opacity: 0.75;
         transition:.3s;
@@ -128,6 +128,7 @@ body{
       &:hover{
         opacity: 0.75;
         transition:.3s;
+        padding: 5px;
       }
     }
 
@@ -319,7 +320,7 @@ body{
     }
     .pagination{
       font-weight: bold;
-      font-family: 'impact';
+      font-family: 'Quicksand', sans-serif;
       font-size: 25px;
       margin-top: 50px;
       background: linear-gradient(#103675, #009999);
