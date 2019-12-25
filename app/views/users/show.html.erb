@@ -13,15 +13,15 @@
 
 <% else %>
   <% if @isRoom == true %>
-    <p><a href="/rooms/<%= @roomId %>">チャットへ</a>
+    <p><a href="/rooms/<%= @roomId %>" class="chat">メッセージを送る</a>
   <% else %>
     <%= form_for @room do |f| %>
       <%= fields_for @entry do |e| %>
         <%= e.hidden_field :user_id, :value=> @user.id %>
       <% end %>
-      <%= f.submit "チャットを始める" %>
+      <%= f.submit "メッセージ" %>
     <% end %>
   <% end %>
 <% end %>
 
-<%= link_to "戻る",root_path %>
+<%= link_to "戻る",root_path, class: "Back" %>

@@ -462,7 +462,7 @@ body{
         font-weight: bold;
         color:#103675;
         font-size: 20px;
-        border-bottom:solid 2px #999;
+        border-bottom:solid 1px #ccc;
         list-style: none;
       }
     }
@@ -599,6 +599,34 @@ body{
     background-color: #ff9900;
     width: 100px;
     -webkit-appearance: initial;
+  }
+  .Back{
+    color: #103675;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 10px;
+    &:hover{
+      opacity: 0.75;
+      transition:.3s;
+      background-color: #103675;
+      color: #fff;
+    }
+  }
+  .chat{
+    color: #103675;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-left: 10px;
+    &:hover{
+      opacity: 0.75;
+      transition:.3s;
+      background-color: #103675;
+      color: #fff;
+    }
   }
 }
 
