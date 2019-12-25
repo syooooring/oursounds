@@ -2,7 +2,7 @@
   <%= @post.title %>
 </div>
 <div class="postDate">
-  <%= @post.created_at %>投稿
+  <%= @post.created_at.strftime("%Y年%m月%d日 %H:%M") %>投稿
 </div>
 <div class="postAuthor">
 </div>
