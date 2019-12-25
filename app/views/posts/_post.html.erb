@@ -11,7 +11,7 @@
           <%= link_to post.user.nickname, user_path(post.user), class: "container__right__bottom__userName__btn" %>
         </div>
         <div class="container__right__bottom__date">
-          <%= post.created_at %>投稿
+          <%= post.created_at.strftime("%Y年%m月%d日 %H:%M") %>
         </div>
       </div>
     </div>
